@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alfabetização Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="topo">
+    <h1 class="titulo glass">Alfabetização Digital de Idosos</h1>
+  </section>
+
+  <main class="container">
+    <!-- Div 1 com conteúdo expansível -->
+    <div class="glass-box">
+      <button class="toggle-btn" onclick="toggleDiv()">Celulares</button>
+      <div id="conteudo-div1" class="conteudo">
+        <p>celulares.</p>
+      </div>
+    </div>
+
+    <!-- Outras divs -->
+    <div class="glass-box">Div 2</div>
+    <div class="glass-box">Div 3</div>
+    <div class="glass-box">Div 4</div>
+    <div class="glass-box">Div 5</div>
+    <div class="glass-box">Div 6</div>
+    <div class="glass-box">Div 7</div>
+    <div class="glass-box">Div 8</div>
+  </main>
+
+  <script>
+    function toggleDiv() {
+      const div = document.getElementById("conteudo-div1");
+      div.style.display = (div.style.display === "none" || div.style.display === "") ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
