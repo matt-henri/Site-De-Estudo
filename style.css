@@ -13,9 +13,9 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  width: 90%;   /* ocupa 90% da tela, seja celular ou PC */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -178,7 +178,7 @@ body {
   justify-content: center;
   backdrop-filter: blur(4px);
   margin-top: -12rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  
 }
 
 .hero-section {
@@ -350,6 +350,20 @@ body {
         transform: translateY(-20px);
     }
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* quebra linha no mobile */
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 300px; /* cresce, diminui, mas nunca menor que 300px */
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
 
 /* Technology Section */
 .technology {
