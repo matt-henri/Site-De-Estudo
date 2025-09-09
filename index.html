@@ -1,41 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alfabetização Digital</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusão Digital - Tecnologia para Idosos</title>
+    <meta name="description" content="Aprenda tecnologia de forma simples e segura. Inclusão digital para idosos com guias práticos sobre celular, WhatsApp, bancos digitais e muito mais.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Inclusão Digital - Tecnologia para Idosos">
+    <meta property="og:description" content="Aprenda tecnologia de forma simples e segura. Inclusão digital para idosos com guias práticos sobre celular, WhatsApp, bancos digitais e muito mais.">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="topo">
-    <h1 class="titulo glass">Alfabetização Digital de Idosos</h1>
-  </section>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">LOGO</div>
+                    <span class="logo-text">Inclusão Digital</span>
+                </div>
+                
+                <nav class="nav-desktop">
+                    <a href="#" class="nav-link">Início</a>
+                    <a href="#" class="nav-link">Sobre</a>
+                    <a href="#" class="nav-link">Contato</a>
+                    <button class="btn-contact">Contato</button>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <main class="container">
-    <!-- Div 1 com conteúdo expansível -->
-    <div class="glass-box">
-      <button class="toggle-btn" onclick="toggleDiv()">Celulares</button>
-      <div id="conteudo-div1" class="conteudo">
-        <p>celulares.</p>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1627328859142-33887a722184?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Inclusão Digital Background" class="hero-bg-img" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, hsl(200, 100%, 40%), hsl(195, 90%, 55%))';">
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Inclusão Digital</h1>
+                    <p class="hero-description">
+                        A importância da inclusão digital para idosos está em ampliar sua autonomia, facilitar o acesso a serviços e fortalecer vínculos sociais. 
+                        Ela contribui para a qualidade de vida, reduz o isolamento e garante maior participação no mundo moderno.
+                    </p>
+                </div>
+                
+
+            </div>
+        </div>
+
+        
+        <div class="scroll-indicator">
+            <div class="scroll-icon">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+        <div class="hero-image">
+             <div class="hero-image-container">
+                 <img src="https://images.unsplash.com/photo-1622130905455-2a5e2a245f4d?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="VR Headset Technology" class="hero-img" onerror="this.parentElement.innerHTML='<div class=&quot;hero-placeholder&quot;>VR Image Placeholder</div>';">
+             </div>
+        </div>
+    <!-- Communication Section -->
+    <section class="communication">
+        <div class="container">
+            <div class="communication-content">
+                <div class="communication-text">
+                    <h2 class="section-title">Comunicação Digital</h2>
+                    <p class="section-description">
+                        O WhatsApp é uma ferramenta essencial para idosos se conectarem com familiares e amigos. 
+                        Através de mensagens, chamadas de vídeo e compartilhamento de fotos, ele aproxima gerações 
+                        e mantém os vínculos familiares fortes, independentemente da distância.
+                    </p>
+                    <button class="btn-primary">Click aqui e aprenda usar</button>
+                </div>
+                
+                <div class="communication-image">
+                    <img src="" alt="Comunicação Digital" class="comm-img" onerror="this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot;>Imagem de Comunicação</div>';">
+                    <div class="floating-element floating-1"></div>
+                    <div class="floating-element floating-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Categories -->
+<section class="technology">
+  <div class="container">
+    <h2 class="tech-title">Introdução à Tecnologia</h2>
+    <div class="tech-grid">
+      <a href="uso-basico.html" class="tech-card">
+        <h3 class="tech-card-title">Uso Básico</h3>
+        <p class="tech-card-description">Aprenda o básico sobre smartphones e tablets</p>
+      </a>
+      <a href="seguranca.html" class="tech-card">
+        <h3 class="tech-card-title">Segurança</h3>
+        <p class="tech-card-description">Mantenha-se seguro no mundo digital</p>
+      </a>
+      <a href="bancos.html" class="tech-card">
+        <h3 class="tech-card-title">Bancos</h3>
+        <p class="tech-card-description">Serviços bancários digitais</p>
+      </a>
+      <a href="redes-sociais.html" class="tech-card">
+        <h3 class="tech-card-title">Redes Sociais</h3>
+        <p class="tech-card-description">Conecte-se com pessoas</p>
+      </a>
+      <a href="lazer.html" class="tech-card">
+        <h3 class="tech-card-title">Lazer</h3>
+        <p class="tech-card-description">Entretenimento digital</p>
+      </a>
+      <a href="saude.html" class="tech-card">
+        <h3 class="tech-card-title">Saúde</h3>
+        <p class="tech-card-description">Cuidados de saúde digitais</p>
+      </a>
     </div>
+  </div>
+</section>
 
-    <!-- Outras divs -->
-    <div class="glass-box">Div 2</div>
-    <div class="glass-box">Div 3</div>
-    <div class="glass-box">Div 4</div>
-    <div class="glass-box">Div 5</div>
-    <div class="glass-box">Div 6</div>
-    <div class="glass-box">Div 7</div>
-    <div class="glass-box">Div 8</div>
-  </main>
 
-  <script>
-    function toggleDiv() {
-      const div = document.getElementById("conteudo-div1");
-      div.style.display = (div.style.display === "none" || div.style.display === "") ? "block" : "none";
-    }
-  </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>Site destinado a informação e inclusão digital</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Cookies</a>
+                    <a href="#" class="footer-link">Privacidade</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Inclusão Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
