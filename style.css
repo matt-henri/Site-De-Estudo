@@ -388,10 +388,17 @@ body {
   }
 }
 
+
 @media (max-width: 767px) {
   .nav-desktop { display: none; }
   .mobile-menu-btn { display: flex; }
   .hero-title { font-size: 2.3rem; }
   .section-title { font-size: 1.8rem; }
   .tech-grid { grid-template-columns: 1fr; }
+  .hero-text,
+  .communication-text,
+  .tech-card {
+   padding-left: 1rem;
+   padding-right: 1rem;
+}
 }
