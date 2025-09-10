@@ -1,6 +1,8 @@
 /* Reset e base */
 :root {
-    --fonte-principal: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Nova fonte principal */
+    --fonte-principal: 'Poppins', sans-serif;
+    
     --cor-fundo: #ffffff;
     --cor-fundo-secao: #f8fafc;
     --cor-texto-principal: #0f172a;
@@ -481,5 +483,53 @@ body {
 
     .tech-card p {
         font-size: 0.85rem;
+    }
+}
+
+/* Seção Sobre */
+.about-section {
+    padding: 8rem 2rem 4rem;
+    background-color: var(--cor-fundo-secao);
+    min-height: calc(100vh - 10rem);
+}
+
+.about-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--cor-texto-principal);
+}
+
+.about-text {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--cor-texto-principal);
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    text-align: justify;
+}
+
+.about-image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+    /* ... outras regras ... */
+
+    /* Ajuste para o botão da página "Sobre" no mobile */
+    .about-section .btn-primary {
+        padding: 0.7rem 1.4rem; /* Diminui o padding */
+        font-size: 0.85rem; /* Diminui o tamanho da fonte */
+        width: auto; /* Garante que o botão não ocupe 100% da largura, se não for necessário */
+        max-width: 90%; /* Limita a largura máxima para não ficar muito largo */
     }
 }
