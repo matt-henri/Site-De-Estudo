@@ -151,6 +151,7 @@ body {
 .hero-bg {
     position: absolute;
     inset: 0;
+    filter: blur(2px) brightness(0.90);
 }
 
 .hero-bg-img {
@@ -162,7 +163,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(15, 23, 42, 0.55);
+    background: rgba(15, 23, 42, 0.45);
 }
 
 .hero-container {
@@ -305,14 +306,17 @@ body {
 }
 
 .tech-card {
-    background: var(--cor-fundo);
+    /* Efeito Glassmorphism */
+    background: rgba(255, 255, 255, 0.15); /* Fundo branco semi-transparente */
+    backdrop-filter: blur(70px); /* O coração do efeito de vidro */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil de vidro */
+    box-shadow: -3 8px 12px 0 rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
+    
     padding: 2.2rem;
     border-radius: 1.5rem;
     text-decoration: none;
-    color: var(--cor-texto-principal);
+    color: var(--cor-texto-claro);
     transition: all 0.35s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -322,19 +326,20 @@ body {
 
 .tech-card:hover, .tech-card:focus {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    background: #f8f8f8;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.4);
 }
 
 .tech-card h3 {
     font-size: 1.35rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--cor-texto-principal);
+    color: var(--cor-texto-claro);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
 .tech-card p {
-    color: var(--cor-texto-secundaria);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -430,29 +435,28 @@ body {
     }
 
     .tech-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
-        gap: 1.5rem; /* Espaçamento menor entre os cards */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
-    /* Redução dos cards na versão mobile/tablet */
     .tech-card {
-        padding: 1.5rem; /* Reduz o padding interno dos cards */
+        padding: 1.5rem;
     }
 
     .tech-card h3 {
-        font-size: 1.2rem; /* Diminui o título do card */
+        font-size: 1.2rem;
         margin-bottom: 0.4rem;
     }
 
     .tech-card p {
-        font-size: 0.9rem; /* Diminui o texto do card */
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 767px) {
     .tech-grid {
-        grid-template-columns: 1fr; /* 1 coluna para celulares */
-        gap: 1rem; /* Espaçamento ainda menor */
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .logo-text {
@@ -460,7 +464,7 @@ body {
     }
     
     .tech-card {
-        padding: 1.2rem; /* Mais redução no padding para celulares */
+        padding: 1.2rem;
     }
     
     .hero-title {
@@ -472,10 +476,10 @@ body {
     }
 
     .tech-card h3 {
-        font-size: 1.3rem; /* Ajuste final do título do card */
+        font-size: 1.1rem;
     }
 
     .tech-card p {
-        font-size: 0.85rem; /* Ajuste final do texto do card */
+        font-size: 0.85rem;
     }
 }
