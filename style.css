@@ -184,8 +184,10 @@ body {
 
 .hero-description {
     font-size: 1.4rem;
-    opacity: 0.95;
-    margin-bottom: 2rem;
+    opacity: 100;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     text-shadow: -1px 1px 4px rgba(0,0,0,0.7);
 }
 
@@ -453,36 +455,57 @@ body {
     .tech-card p {
         font-size: 0.9rem;
     }
+
+    .about-section .btn-primary {
+        padding: 0.7rem 1.4rem;
+        font-size: 0.95rem;
+        width: auto;
+        max-width: 90%;
+    }
 }
 
 @media (max-width: 767px) {
-    .tech-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    /* Centraliza o texto e o botão do Hero */
+    .hero-text {
+        text-align: center;
     }
-    
+
+    /* Ajuste do tamanho dos títulos para mobile */
     .logo-text {
-        font-size: 1rem;
-    }
-    
-    .tech-card {
-        padding: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .tech-title {
         font-size: 2rem;
     }
 
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    /* MUDANÇA DE TAMANHO DE FONTE APENAS PARA O TEXTO */
+    .hero-description,
+    .section-description,
+    .about-text{
+        font-size: 1.2rem;
+    }
+    
+    /* Outras regras para mobile */
+    .tech-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .tech-card {
+        padding: 1.2rem;
+    }
+    
     .tech-card h3 {
         font-size: 1.1rem;
-    }
-
-    .tech-card p {
-        font-size: 0.85rem;
     }
 }
 
