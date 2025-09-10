@@ -319,19 +319,20 @@ body {
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
 .tech-card {
-  background: linear-gradient(135deg, hsl(200, 100%, 96%), hsl(195, 90%, 92%));
-  padding: 2rem;
-  border-radius: 1rem;
+  /* Fundo de cor sólida (branco ou um tom claro de cinza) */
+  background: #ffffff;
+  padding: 2.2rem;
+  border-radius: 1.5rem; /* Aumenta a curvatura da borda */
   text-decoration: none;
-  color: #0f172a;
+  color: #1a1a1a;
   transition: all 0.35s ease;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Borda muito sutil */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* Sombra mais suave */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -340,9 +341,12 @@ body {
 }
 
 .tech-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-  background: linear-gradient(135deg, hsl(200, 100%, 90%), hsl(195, 90%, 85%));
+  /* Elevação sutil no hover */
+  transform: translateY(-5px);
+  /* Sombra mais pronunciada para criar o efeito de "flutuar" */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Fundo sutilmente escurecido no hover */
+  background: #f8f8f8;
 }
 
 .tech-card img {
@@ -365,21 +369,16 @@ body {
   line-height: 1.6;
 }
 
-.tech-card img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-}
 
 .tech-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: #0f172a;
 }
 
 .tech-card p {
-  color: #475569;
+  color: #64748b;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -475,7 +474,7 @@ body {
     .communication-image {
     display: none;
   }
-  
+
 }
 
 @media (max-width: 767px) {
