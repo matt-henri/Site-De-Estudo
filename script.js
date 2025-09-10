@@ -1,13 +1,21 @@
-// Mobile menu toggle
-function toggleMobileMenu() {
-    // Simple mobile menu toggle functionality
-    // You can expand this as needed
-    alert('Menu mobile - funcionalidade a ser implementada');
-}
+// --- script.js ---
 
-// Smooth scrolling for anchor links
 document.addEventListener('DOMContentLoaded', function() {
-    // Add smooth scrolling to all links
+    // Referências aos elementos do DOM
+    const header = document.querySelector('.header');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navDesktop = document.querySelector('.nav-desktop'); // Usaremos para o menu mobile
+
+    // --- Funcionalidade do Menu Mobile ---
+    // Apenas para telas pequenas, o nav-desktop se tornará o menu mobile
+    mobileMenuBtn.addEventListener('click', function() {
+        // Alterna a classe 'is-open' no botão para animar o ícone
+        this.classList.toggle('is-open'); 
+        // Alterna a classe 'is-open' na navegação para mostrar/esconder o menu
+        navDesktop.classList.toggle('is-open'); 
+    });
+
+    // --- Scroll Suave para links internos ---
     const links = document.querySelectorAll('a[href^="#"]');
     
     links.forEach(link => {
@@ -24,50 +32,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Add scroll effect to header
-    const header = document.querySelector('.header');
-    let lastScrollTop = 0;
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
-});
 
-// Button interactions
-document.addEventListener('DOMContentLoaded', function() {
+    // --- Efeito de rolagem no Header ---
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // --- Animação de Clique nos Botões ---
     const buttons = document.querySelectorAll('.btn-primary, .btn-contact');
     
     buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            // Add click animation
-            this.style.transform = 'scale(0.95)';
+        button.addEventListener('click', function() {
+            // Adiciona e remove a classe 'clicked' para a animação CSS
+            this.classList.add('clicked');
             setTimeout(() => {
-                this.style.transform = '';
+                this.classList.remove('clicked');
             }, 150);
-        });
-    });
-});
-
-// Image lazy loading fallback
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img');
-    
-    images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
-        
-        img.addEventListener('error', function() {
-            console.log('Imagem não carregou:', this.src);
         });
     });
 });
