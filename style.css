@@ -639,8 +639,8 @@ body {
 /* Listas (ul, ol) */
 .content-block ul,
 .content-block ol {
-    margin-left: 2rem;
-    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
 }
 
 .content-block li {
@@ -672,7 +672,7 @@ body {
     /* Listas */
     .content-block ul,
     .content-block ol {
-        margin-left: 1rem;
+        margin-left: 0.1rem;
         font-size: 0.8rem;
     }
 }
