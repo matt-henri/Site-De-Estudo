@@ -556,3 +556,98 @@ body {
         max-width: 90%; /* Limita a largura máxima para não ficar muito largo */
     }
 }
+
+/* Estilos para as páginas de conteúdo (Uso Básico, etc.) */
+.content-page {
+    padding: 8rem 2rem 4rem;
+    background-color: var(--cor-fundo-secao);
+    min-height: calc(100vh - 10rem);
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--cor-texto-principal);
+}
+
+.page-intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--cor-texto-secundaria);
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.content-block {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.content-block:last-child {
+    
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.content-subtitle {
+  text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--cor-texto-principal);
+    margin-bottom: 1.5rem;
+}
+
+.content-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--cor-texto-principal);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.content-illustration {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.content-image {
+    max-width: 60%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Responsividade para a nova página de conteúdo */
+@media (max-width: 767px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-intro {
+        font-size: 1rem;
+    }
+    
+    .content-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .content-text {
+        font-size: 0.95rem;
+    }
+    .content-image {
+    max-width: 95%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+}
