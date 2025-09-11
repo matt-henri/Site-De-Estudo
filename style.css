@@ -117,10 +117,10 @@ body {
 .btn-primary {
     background: linear-gradient(135deg, var(--cor-botao-inicio), var(--cor-botao-fim));
     color: var(--cor-texto-claro);
-    padding: 0.85rem 1.7rem;
+    padding: 0.5rem 1.7rem;
     border: none;
     border-radius: 0.75rem;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -507,6 +507,7 @@ body {
     .tech-card h3 {
         font-size: 1.1rem;
     }
+
 }
 
 /* Seção Sobre */
@@ -557,15 +558,16 @@ body {
     }
 }
 
-/* Estilos para as páginas de conteúdo (Uso Básico, etc.) */
+/* Estilos para as páginas de conteúdo */
 .content-page {
     padding: 8rem 2rem 4rem;
     background-color: var(--cor-fundo-secao);
     min-height: calc(100vh - 10rem);
 }
 
+/* Estilos de títulos e textos */
 .page-title {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Reduzido de 2.5rem */
     font-weight: 700;
     text-align: center;
     margin-bottom: 1.5rem;
@@ -573,19 +575,40 @@ body {
 }
 
 .page-intro {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: var(--cor-texto-secundaria);
     max-width: 800px;
     margin: 0 auto 3rem;
-    text-align: center;
+    text-align: left;
 }
 
+.content-subtitle {
+    font-size: 1.5rem; /* Reduzido de 1.8rem */
+    font-weight: 600;
+    color: var(--cor-texto-principal);
+    margin-bottom: 0.5rem;
+}
+
+.content-text {
+    font-size: 0.9rem; /* Reduzido de 1.1rem */
+    line-height: 1.8;
+    color: var(--cor-texto-principal);
+    margin-bottom: 1.5rem;
+}
+
+.footer-info {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* --- */
+
+/* Blocos de conteúdo, imagens e botões */
 .content-block {
     margin-bottom: 4rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid #e2e8f0;
-    /* Alinhamento de texto à esquerda para maior legibilidade */
     text-align: left;
 }
 
@@ -595,7 +618,6 @@ body {
 }
 
 .content-illustration {
-    max-width: 100%;
     text-align: center;
     margin: 2rem 0;
 }
@@ -607,21 +629,14 @@ body {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.content-subtitle {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--cor-texto-principal);
-    margin-bottom: 0.5rem;
+.button-container {
+    text-align: center;
+    margin-top: 3rem;
 }
 
-.content-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--cor-texto-principal);
-    margin-bottom: 1.5rem;
-}
+/* --- */
 
-/* Ajustes para as listas e seus itens */
+/* Listas (ul, ol) */
 .content-block ul,
 .content-block ol {
     margin-left: 2rem;
@@ -632,45 +647,32 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.button-container {
-    text-align: center;
-    margin-top: 3rem;
-}
+/* --- */
 
-.footer-info {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-/* Responsividade para a nova página de conteúdo */
+/* Responsividade */
 @media (max-width: 767px) {
+    /* Fontes e espaçamento de texto */
     .page-title {
-        font-size: 2rem;
-    }
-
-    .page-intro {
-        font-size: 1rem;
+        font-size: 1.6rem; /* Reduzido de 2rem */
     }
     
     .content-subtitle {
-        font-size: 1.5rem;
+        font-size: 1rem; /* Reduzido de 1.5rem */
     }
-
+    
     .content-text {
-        font-size: 0.95rem;
+        font-size: 0.85rem; /* Reduzido de 0.95rem */
     }
 
-    /* Reduz o recuo das listas em telas menores */
+    /* Imagens */
+    .content-image {
+        max-width: 100%;
+    }
+
+    /* Listas */
     .content-block ul,
     .content-block ol {
         margin-left: 1rem;
+        font-size: 0.8rem;
     }
-
-    .content-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
 }
