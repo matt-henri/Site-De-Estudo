@@ -595,6 +595,7 @@ body {
 }
 
 .content-illustration {
+    max-width: 100%;
     text-align: center;
     margin: 2rem 0;
 }
@@ -634,6 +635,11 @@ body {
 .button-container {
     text-align: center;
     margin-top: 3rem;
+}
+
+.footer-info {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 /* Responsividade para a nova página de conteúdo */
