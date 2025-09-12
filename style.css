@@ -467,16 +467,23 @@ body {
 @media (max-width: 767px) {
     /* Centraliza o texto e o botão do Hero */
     .hero-text {
-        text-align: center;
+        text-align: left;
     }
 
     /* Ajuste do tamanho dos títulos para mobile */
     .logo-text {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        
+    }
+
+    .btn-primary {
+        margin-left: 1rem;
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.1rem;
+        margin-left: 1rem;
+        margin-top: -8rem;
     }
     
     .tech-title {
@@ -558,7 +565,7 @@ body {
     }
 }
 
-/* Estilos para as páginas de conteúdo */
+/* Estilos para as páginas de conteúdo Uso Basico*/
 .content-page {
     padding: 8rem 2rem 4rem;
     background-color: var(--cor-fundo-secao);
@@ -601,6 +608,12 @@ body {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.75);
 }
+
+.texto-destaque {
+    font-size: 1.2rem;
+}
+
+
 
 /* --- */
 
@@ -651,6 +664,8 @@ body {
 
 /* Responsividade */
 @media (max-width: 767px) {
+
+
     /* Fontes e espaçamento de texto */
     .page-title {
         font-size: 1.6rem; /* Reduzido de 2rem */
