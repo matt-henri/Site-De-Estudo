@@ -603,6 +603,17 @@ body {
         text-align: center;
     }
 
+    .content-illustration {
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .content-image {
+        max-width: 100%; /* Aumenta o tamanho da imagem para 90% do contêiner */
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: -3px 6px 9px rgba(0, 0, 0, 0.25);
+    }
+
     .comm-img-wrapper {
         display: none;
     }
