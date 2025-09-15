@@ -292,6 +292,14 @@ body {
     text-shadow: -1px 1px 4px rgba(0,0,0,0.7);
 }
 
+.hero-cta {
+    display: flex; /* Transforma o contêiner em um flexbox */
+    justify-content: left; /* Centraliza o conteúdo horizontalmente */
+    margin-top: 2rem; /* Adiciona um espaço acima do botão */
+    margin-left: 1rem;
+
+}
+
 /* Seção de Tecnologia (com fundo de imagem) */
 .technology {
     position: relative;
@@ -590,6 +598,7 @@ body {
     .section-title,
     .hero-title,
     .tech-title {
+        margin-top: 2.1rem;
         font-size: 2.3rem;
         text-align: center;
     }
