@@ -1,27 +1,40 @@
-/* Reset e base */
+/* ======================================= */
+/* 1. CONFIGURAÇÕES BASE       */
+/* ======================================= */
+
+/* Definição de Variáveis de Cores e Fontes */
 :root {
-    /* Nova fonte principal */
     --fonte-principal: 'Poppins', sans-serif;
     
+    /* Cores */
     --cor-fundo: #ffffff;
     --cor-fundo-secao: #f8fafc;
     --cor-texto-principal: #0f172a;
     --cor-texto-secundaria: #475569;
     --cor-texto-claro: #fff;
-    --cor-botao-inicio: hsl(200, 100%, 45%);
-    --cor-botao-fim: hsl(195, 90%, 55%);
+    --cor-primaria: hsl(200, 100%, 45%);
+    --cor-secundaria: #6c757d;
     --cor-link-hover: hsl(200, 100%, 40%);
+    --cor-borda-claro: #e2e8f0;
+
+    /* Gradientes */
+    --gradiente-botao: linear-gradient(135deg, hsl(200, 100%, 45%), hsl(195, 90%, 55%));
+    --gradiente-botao-hover: linear-gradient(135deg, hsl(200, 100%, 40%), hsl(195, 90%, 50%));
+    
+    /* Sombras */
     --sombra-leve: 0 2px 6px rgba(0,0,0,0.08);
     --sombra-media: 0 4px 12px rgba(0,0,0,0.25);
     --sombra-pesada: 0 6px 14px rgba(0, 123, 255, 0.35);
 }
 
+/* Reset Universal */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos Padrão do Corpo da Página */
 body {
     font-family: var(--fonte-principal);
     line-height: 1.6;
@@ -30,13 +43,43 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Contêiner Principal de Largura Limitada */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* Header */
+/* ======================================= */
+/* 2. SEÇÕES GERAIS            */
+/* ======================================= */
+
+.section {
+    padding: 6rem 1rem;
+    background-color: var(--cor-fundo);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: var(--cor-texto-secundaria);
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* ======================================= */
+/* 3. HEADER E NAVEGAÇÃO       */
+/* ======================================= */
+
 .header {
     position: fixed;
     top: 0;
@@ -66,6 +109,8 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
+    color: var(--cor-texto-principal);
 }
 
 .logo-icon img {
@@ -76,7 +121,6 @@ body {
 .logo-text {
     font-size: 1.35rem;
     font-weight: 700;
-    color: var(--cor-texto-principal);
 }
 
 .nav-desktop {
@@ -113,9 +157,12 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Botões */
+/* ======================================= */
+/* 4. BOTÕES E LINKS           */
+/* ======================================= */
+
 .btn-primary {
-    background: linear-gradient(135deg, var(--cor-botao-inicio), var(--cor-botao-fim));
+    background: var(--gradiente-botao);
     color: var(--cor-texto-claro);
     padding: 0.85rem 1.7rem;
     border: none;
@@ -130,7 +177,7 @@ body {
 }
 
 .btn-primary:hover, .btn-primary:focus {
-    background: linear-gradient(135deg, hsl(200, 100%, 40%), hsl(195, 90%, 50%));
+    background: var(--gradiente-botao-hover);
     transform: translateY(-2px) scale(1.02);
     box-shadow: var(--sombra-pesada);
 }
@@ -140,7 +187,61 @@ body {
     box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
 }
 
-/* Hero */
+.button-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* ======================================= */
+/* 5. SEÇÕES DA PÁGINA INICIAL */
+/* ======================================= */
+
+
+/* Seção Comunicação */
+.communication {
+    padding: 3rem 1rem 5rem;
+    background: var(--cor-fundo-secao);
+}
+
+.communication-content {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr; /* Coluna do texto maior, coluna da imagem menor */
+    gap: 3rem;
+    align-items: center;
+    max-width: 1000px; /* Limita a largura total do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo da comunicação */
+}
+
+.comm-img-wrapper { /* Novo wrapper para a imagem */
+    display: flex; /* Para centralizar a imagem dentro da sua coluna */
+    justify-content: flex-end; /* Alinha a imagem à direita */
+    align-items: center;
+}
+
+.comm-img {
+    width: 100%; /* A imagem vai ocupar 100% da largura do seu wrapper */
+    max-width: 380px; /* Limite a largura real da imagem aqui */
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Floating elements (se você quiser manter, caso contrário pode remover) */
+.floating-element {
+    position: absolute; /* Para que flutuem em relação ao wrapper */
+    background: rgba(var(--cor-primaria-rgb), 0.1);
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 0;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Seção Hero */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -191,88 +292,16 @@ body {
     text-shadow: -1px 1px 4px rgba(0,0,0,0.7);
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--cor-texto-claro);
-    animation: bounce 2s infinite;
-}
-
-.scroll-icon {
-    width: 1.6rem;
-    height: 2.8rem;
-    border: 3px solid rgba(255, 255, 255, 0.6);
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    padding-top: 0.5rem;
-}
-
-.scroll-dot {
-    width: 5px;
-    height: 12px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 3px;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-}
-
-/* Sections */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--cor-texto-principal);
-    margin-bottom: 1.2rem;
-}
-
-.section-description {
-    font-size: 1.2rem;
-    color: var(--cor-texto-secundaria);
-    margin-bottom: 2rem;
-    line-height: 1.7;
-}
-
-/* Comunicação */
-.communication {
-    padding: 6rem 2rem;
-    background: var(--cor-fundo-secao);
-}
-
-.communication-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.comm-img {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-}
-
-.floating-1 { width: 60px; height: 60px; top: -20px; right: -20px; }
-.floating-2 { width: 40px; height: 40px; bottom: -10px; left: -10px; }
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-}
-
-/* Tecnologia */
+/* Seção de Tecnologia (com fundo de imagem) */
 .technology {
     position: relative;
     padding: 6rem 2rem;
     color: var(--cor-texto-claro);
     overflow: hidden;
+    background-image: url("https://images.unsplash.com/photo-1592890288564-76628a30a657?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
 }
 
 .technology::before {
@@ -282,10 +311,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("https://images.unsplash.com/photo-1592890288564-76628a30a657?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-size: cover;
-    background-position: center;
-    filter: blur(4px) brightness(0.6);
+    background-color: rgba(0, 0, 0, 0.45);
+    filter: blur(4px);
     z-index: 0;
 }
 
@@ -297,7 +324,6 @@ body {
 .tech-title {
     font-size: 2.5rem;
     font-weight: 700;
-    text-align: center;
     margin-bottom: 3rem;
     color: var(--cor-texto-claro);
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
@@ -310,11 +336,10 @@ body {
 }
 
 .tech-card {
-    /* Efeito Glassmorphism */
-    background: rgba(255, 255, 255, 0.15); /* Fundo branco semi-transparente */
-    backdrop-filter: blur(70px); /* O coração do efeito de vidro */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil de vidro */
-    box-shadow: -3 8px 12px 0 rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(70px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.4);
     
     padding: 2.2rem;
     border-radius: 1.5rem;
@@ -348,7 +373,98 @@ body {
     line-height: 1.5;
 }
 
-/* Footer */
+/* ======================================= */
+/* 6. PÁGINAS DE CONTEÚDO      */
+/* ======================================= */
+
+.content-page {
+    padding: 8rem 2rem 4rem;
+    background-color: var(--cor-fundo-secao);
+    min-height: calc(100vh - 10rem);
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: var(--cor-texto-principal);
+}
+
+.page-intro {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--cor-texto-secundaria);
+    max-width: 800px;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.content-subtitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--cor-texto-principal);
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.content-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--cor-texto-principal);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.texto-destaque {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.content-block {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--cor-borda-claro);
+    text-align: left;
+}
+
+.content-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.content-illustration {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.communication-image {
+    padding: auto;
+    width: 10%;
+    height: 10%;
+}
+
+.content-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.content-block ul,
+.content-block ol {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-block li {
+    margin-bottom: 0.5rem;
+}
+
+/* ======================================= */
+/* 7. FOOTER                   */
+/* ======================================= */
+
 .footer {
     background: var(--cor-texto-principal);
     color: var(--cor-texto-claro);
@@ -364,7 +480,8 @@ body {
     gap: 1rem;
 }
 
-.footer-info {
+.footer {
+    font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.75);
 }
 
@@ -390,7 +507,11 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Responsivo */
+
+/* ======================================= */
+/* 8. RESPONSIVIDADE           */
+/* ======================================= */
+
 @media (max-width: 991px) {
     .nav-desktop {
         position: fixed;
@@ -465,469 +586,61 @@ body {
 }
 
 @media (max-width: 767px) {
-    /* Centraliza o texto e o botão do Hero */
-    .hero-text {
+    /* Ajustes Gerais para Telas Pequenas */
+    .section-title,
+    .hero-title,
+    .tech-title {
+        font-size: 2.3rem;
         text-align: center;
     }
 
-    /* Ajuste do tamanho dos títulos para mobile */
-    .logo-text {
+    .comm-img-wrapper {
+        display: none;
+    }
+    .hero-description,
+    .section-description {
         font-size: 1.1rem;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .tech-title {
-        font-size: 2rem;
+        text-align: left;
     }
 
-    .about-title {
-        font-size: 2rem;
-    }
-    
-    /* MUDANÇA DE TAMANHO DE FONTE APENAS PARA O TEXTO */
-    .hero-description,
-    .section-description,
-    .about-text{
-        font-size: 1.2rem;
-    }
-    
-    /* Outras regras para mobile */
     .tech-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
     
     .tech-card {
-        padding: 1.2rem;
+        padding: 1.0rem;
     }
     
     .tech-card h3 {
-        font-size: 1.1rem;
-    }
-}
-
-/* Seção Sobre */
-.about-section {
-    padding: 8rem 2rem 4rem;
-    background-color: var(--cor-fundo-secao);
-    min-height: calc(100vh - 10rem);
-}
-
-.about-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--cor-texto-principal);
-}
-
-.about-text {
-    font-size: 1.0rem;
-    line-height: 1.8;
-    color: var(--cor-texto-principal);
-    max-width: 800px;
-    margin: 0 auto 1.5rem;
-    text-align: justify;
-}
-
-.about-image-container {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.about-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 767px) {
-    /* ... outras regras ... */
-
-    /* Ajuste para o botão da página "Sobre" no mobile */
-    .about-section .btn-primary {
-        padding: 0.7rem 1.4rem; /* Diminui o padding */
-        font-size: 0.85rem; /* Diminui o tamanho da fonte */
-        width: auto; /* Garante que o botão não ocupe 100% da largura, se não for necessário */
-        max-width: 90%; /* Limita a largura máxima para não ficar muito largo */
-    }
-}
-
-/* Estilos para as páginas de conteúdo (Uso Básico, etc.) */
-.content-page {
-    padding: 8rem 2rem 4rem;
-    background-color: var(--cor-fundo-secao);
-    min-height: calc(100vh - 10rem);
-}
-
-.page-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: var(--cor-texto-principal);
-}
-
-.page-intro {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: var(--cor-texto-secundaria);
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    text-align: center;
-}
-
-.content-block {
-    margin-bottom: 4rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #e2e8f0;
-    /* Alinhamento de texto à esquerda para maior legibilidade */
-    text-align: left;
-}
-
-.content-block:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.content-illustration {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.content-image {
-    max-width: 70%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.content-subtitle {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--cor-texto-principal);
-    margin-bottom: 0.5rem;
-}
-
-.content-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--cor-texto-principal);
-    margin-bottom: 1.5rem;
-}
-
-/* Ajustes para as listas e seus itens */
-.content-block ul,
-.content-block ol {
-    margin-left: 2/* Estilos gerais para o site */
-:root {
-    --cor-primaria: #007BFF;
-    --cor-secundaria: #6c757d;
-    --cor-texto-principal: #333;
-    --cor-texto-secundaria: #555;
-    --cor-fundo-secao: #f8f9fa;
-    --cor-borda: #e0e0e0;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--cor-texto-principal);
-    background-color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
-/* Header */
-.header {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--cor-texto-principal);
-}
-
-.logo-icon img {
-    height: 35px;
-    margin-right: 0.5rem;
-}
-
-.logo-text {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.nav-desktop {
-    display: flex;
-}
-
-.nav-link {
-    margin-left: 2rem;
-    color: var(--cor-secundaria);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--cor-primaria);
-}
-
-.mobile-menu-btn {
-    display: none; /* Escondido por padrão, visível apenas em mobile */
-}
-
-/* Conteúdo principal (Home) */
-.hero-section {
-    padding: 12rem 0 6rem;
-    text-align: center;
-    background-color: var(--cor-fundo-secao);
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: var(--cor-texto-principal);
-    margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    color: var(--cor-texto-secundaria);
-    max-width: 600px;
-    margin: 0 auto 2rem;
-}
-
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-    text-align: left;
-}
-
-.tech-card {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    color: var(--cor-texto-principal);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tech-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.tech-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.tech-card p {
-    font-size: 1rem;
-    color: var(--cor-texto-secundaria);
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    background-color: var(--cor-primaria);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 3rem 0 1rem;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-info {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.75);
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #fff;
-}
-
-.footer-bottom {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* Estilos para as páginas de conteúdo (Uso Básico, etc.) */
-.content-page {
-    padding: 8rem 2rem 4rem;
-    background-color: var(--cor-fundo-secao);
-    min-height: calc(100vh - 10rem);
-}
-
-/* Estilos de títulos e textos */
-.page-title {
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: left;
-    margin-bottom: 1.5rem;
-    color: var(--cor-texto-principal);
-}
-
-.page-intro {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--cor-texto-secundaria);
-    margin-bottom: 3rem;
-    text-align: left;
-}
-
-.content-subtitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--cor-texto-principal);
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
-
-.content-text {
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: var(--cor-texto-principal);
-    margin-bottom: 1.5rem;
-    text-align: left;
-}
-
-.texto-destaque {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-/* Blocos de conteúdo, imagens e botões */
-.content-block {
-    margin-bottom: 4rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #e2e8f0;
-    /* Remover text-align: left; do content-block se não for necessário */
-    /* text-align: left; */
-}
-
-.content-block:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.content-illustration {
-    text-align: left;
-    margin: 2rem 0;
-}
-
-.content-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-.button-container {
-    text-align: left;
-    margin-top: 3rem;
-}
-
-/* Listas (ul, ol) */
-.content-block ul,
-.content-block ol {
-    padding-left: 2rem; /* Usar padding-left para o recuo dos marcadores */
-    margin-bottom: 1.5rem;
-}
-
-.content-block li {
-    margin-bottom: 0.5rem;
-}
-
-/* Responsividade */
-@media (max-width: 767px) {
-    .page-title, .page-intro, .content-subtitle, .content-text {
-        text-align: left; /* Garante alinhamento à esquerda em telas pequenas */
-    }
-
-    .page-title {
-        font-size: 1.6rem;
+        font-size: 1.0rem;
     }
     
-    .content-subtitle {
-        font-size: 1.3rem;
+    /* Fontes das Páginas de Conteúdo */
+    .content-page .page-title {
+        font-size: 2rem;
+        text-align: left;
     }
-    
-    .content-text {
+    .content-page .page-intro {
+        font-size: 0.95rem;
+    }
+    .content-page .content-subtitle {
+        font-size: 1.5rem;
+    }
+    .content-page .content-text {
         font-size: 0.9rem;
-    }
-
-    .content-image {
-        max-width: 100%;
     }
 
     .content-block ul,
     .content-block ol {
-        padding-left: 1rem;
+        padding-left: 0.6rem; /* Reduz o recuo da lista para mobile */
     }
+
+    .content-page .btn-primary {
+        padding: 0.8rem 1.0rem ;   /* Reduz ainda mais o padding */
+        font-size: 0.9rem;        /* Reduz o tamanho da fonte */
+        max-width: 400px;         /* Garante que o botão não seja muito largo */
+    }
+
+
 }
