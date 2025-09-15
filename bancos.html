@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bancos Digitais - Inclusão Digital</title>
+    <title>Bancos e Finanças - Inclusão Digital</title>
+    <meta name="description" content="Guia prático para idosos sobre como usar aplicativos de banco, internet banking e ferramentas financeiras para o dia a dia.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,58 +17,89 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="logo-icon">🏠</div>
+                    <a href="index.html" class="logo-icon">
+                        <img src="https://cdn-icons-png.freepik.com/512/9594/9594288.png" alt="Logo Inclusão Digital">
+                    </a>
                     <span class="logo-text">Inclusão Digital</span>
                 </div>
+                
                 <nav class="nav-desktop">
-                    <a href="index.html" class="nav-link">Início</a>
-                    <a href="#" class="nav-link">Sobre</a>
-                    <a href="#" class="nav-link">Contato</a>
+                    <a href="index.html#inicio" class="nav-link">Início</a>
+                    <a href="sobre.html" class="nav-link">Sobre</a>
+                    <a href="index.html#contato" class="nav-link">Contato</a>
                 </nav>
+                
+                <button class="mobile-menu-btn" aria-label="Abrir Menu" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
 
-    <main style="padding-top: 5rem; min-height: 80vh;">
+    <section class="content-page">
         <div class="container">
-            <div style="padding: 3rem 0;">
-                <h1 style="font-size: 2.5rem; font-weight: bold; text-align: center; margin-bottom: 2rem;">
-                    Bancos Digitais
-                </h1>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <p style="font-size: 1.125rem; color: #6b7280; text-align: center; margin-bottom: 3rem;">
-                        Aprenda a usar serviços bancários digitais de forma segura e prática.
-                    </p>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-                        <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-                            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Internet Banking</h3>
-                            <p style="color: #6b7280;">Conteúdo será adicionado aqui...</p>
-                        </div>
-                        <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-                            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">PIX</h3>
-                            <p style="color: #6b7280;">Conteúdo será adicionado aqui...</p>
-                        </div>
-                    </div>
+            <h1 class="page-title">Bancos e Finanças na Internet</h1>
+            <p class="page-intro">
+                Gerenciar suas finanças pode ser muito mais fácil com a ajuda da tecnologia. Aplicativos de banco e serviços de internet banking eliminam filas e oferecem segurança para você cuidar do seu dinheiro de forma prática, a qualquer hora e em qualquer lugar.
+            </p>
+
+            <div class="content-block">
+                <h2 class="content-subtitle">1. O Aplicativo do Banco: O Fim das Filas</h2>
+                <div class="content-illustration">
+                    <img src="caminho/para/sua/imagem-app-banco.jpg" alt="Pessoa idosa usando aplicativo de banco no celular" class="content-image">
+                </div>
+                <p class="content-text">
+                    O aplicativo do seu banco é a principal ferramenta para fazer tudo sem sair de casa. Com ele, você pode verificar o saldo, pagar contas, fazer transferências e até consultar o extrato. É como ter uma agência bancária no seu bolso.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2 class="content-subtitle">2. Pagamento de Contas e Boletos</h2>
+                <p class="content-text">
+                    Esqueça a digitação de códigos longos. Com o aplicativo do banco, você pode pagar suas contas apenas usando a câmera do celular para escanear o código de barras do boleto. O aplicativo preenche os dados automaticamente, tornando o processo rápido e sem erros.
+                </p>
+                <div class="content-illustration">
+                    <img src="caminho/para/sua/imagem-boleto.jpg" alt="Celular escaneando o código de barras de um boleto" class="content-image">
                 </div>
             </div>
-        </div>
-    </main>
 
-    <footer class="footer">
+            <div class="content-block">
+                <h2 class="content-subtitle">3. A Segurança em Primeiro Lugar</h2>
+                <ul>
+                        <p class="content-text">
+                            <strong>Senhas Fortes:</strong> Crie senhas únicas e fortes, com letras maiúsculas, minúsculas e números. Nunca anote sua senha em locais de fácil acesso e não a compartilhe com ninguém.
+                        </p>
+                     
+                        <p class="content-text">
+                            <strong>Mensagens Falsas:</strong> Bancos nunca pedem dados pessoais, senhas ou códigos por e-mail, WhatsApp ou SMS. Se receber uma mensagem suspeita, não clique em links e entre em contato com o banco pelo número oficial.
+                        </p>
+                        <p class="content-text">
+                            <strong>Cuidado com Ligações:</strong> Jamais forneça seus dados por telefone. Nenhuma instituição financeira pede sua senha, número de cartão ou código de segurança em uma ligação.
+                        </p>
+                </ul>
+            </div>
+            
+            <div class="button-container">
+                <a href="index.html#tecnologia" class="btn-primary">Voltar para a Página Principal</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contato">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <p>Site destinado a informação e inclusão digital</p>
-                </div>
+                <p class="footer-info">Site destinado à informação e inclusão digital</p>
                 <div class="footer-links">
                     <a href="#" class="footer-link">Cookies</a>
                     <a href="#" class="footer-link">Privacidade</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Inclusão Digital. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Inclusão Digital. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

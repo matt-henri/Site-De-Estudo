@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde Digital - Inclusão Digital</title>
+    <title>Saúde e Tecnologia - Inclusão Digital</title>
+    <meta name="description" content="Descubra como a tecnologia pode ajudar idosos a monitorar a saúde, marcar consultas e obter informações confiáveis sobre bem-estar.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,58 +17,89 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="logo-icon">🏠</div>
+                    <a href="index.html" class="logo-icon">
+                        <img src="https://cdn-icons-png.freepik.com/512/9594/9594288.png" alt="Logo Inclusão Digital">
+                    </a>
                     <span class="logo-text">Inclusão Digital</span>
                 </div>
+                
                 <nav class="nav-desktop">
-                    <a href="index.html" class="nav-link">Início</a>
-                    <a href="#" class="nav-link">Sobre</a>
-                    <a href="#" class="nav-link">Contato</a>
+                    <a href="index.html#inicio" class="nav-link">Início</a>
+                    <a href="sobre.html" class="nav-link">Sobre</a>
+                    <a href="index.html#contato" class="nav-link">Contato</a>
                 </nav>
+                
+                <button class="mobile-menu-btn" aria-label="Abrir Menu" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
 
-    <main style="padding-top: 5rem; min-height: 80vh;">
+    <section class="content-page">
         <div class="container">
-            <div style="padding: 3rem 0;">
-                <h1 style="font-size: 2.5rem; font-weight: bold; text-align: center; margin-bottom: 2rem;">
-                    Saúde Digital
-                </h1>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <p style="font-size: 1.125rem; color: #6b7280; text-align: center; margin-bottom: 3rem;">
-                        Aprenda sobre recursos digitais para cuidar da sua saúde.
-                    </p>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-                        <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-                            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Telemedicina</h3>
-                            <p style="color: #6b7280;">Conteúdo será adicionado aqui...</p>
-                        </div>
-                        <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-                            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Apps de Saúde</h3>
-                            <p style="color: #6b7280;">Conteúdo será adicionado aqui...</p>
-                        </div>
-                    </div>
+            <h1 class="page-title">Saúde na Ponta dos Dedos</h1>
+            <p class="page-intro">
+                A tecnologia pode ser uma grande aliada para cuidar da sua saúde e bem-estar. Descubra como o celular e a internet podem facilitar o seu dia a dia e te ajudar a viver com mais tranquilidade.
+            </p>
+
+            <div class="content-block">
+                <h2 class="content-subtitle">1. Agendamento de consultas e telemedicina</h2>
+                <div class="content-illustration">
+                    <img src="caminho/para/sua/imagem-consulta.jpg" alt="Pessoa idosa agendando consulta pelo celular" class="content-image">
                 </div>
+                <p class="content-text">
+                    Ligar para o consultório ou ir até um posto de saúde pode ser cansativo. Agora, muitos hospitais e clínicas oferecem aplicativos para agendar consultas e exames de forma rápida, no conforto de sua casa.
+                </p>
+                <p class="content-text">
+                    A **telemedicina** é outra grande vantagem. Ela permite que você converse com médicos por videochamada para tirar dúvidas, receber orientações e até obter receitas. É uma forma segura de cuidar de sua saúde sem precisar sair de casa.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2 class="content-subtitle">2. Lembretes e controle de medicamentos</h2>
+                <p class="content-text">
+                    Esquecer de tomar um remédio é algo que pode acontecer com qualquer pessoa. Felizmente, existem aplicativos que funcionam como uma enfermeira particular no seu celular. Você pode cadastrar o horário de cada medicamento e o aplicativo te envia um lembrete na hora certa.
+                </p>
+                <p class="content-text">
+                    Além disso, alguns aplicativos permitem que você registre a dosagem e o histórico de uso. Isso ajuda a controlar o tratamento e facilita a conversa com o seu médico sobre como o tratamento está funcionando.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2 class="content-subtitle">3. Acesso rápido a informações e notícias</h2>
+                <div class="content-illustration">
+                    <img src="caminho/para/sua/imagem-informacoes.jpg" alt="Pessoa lendo notícias de saúde no tablet" class="content-image">
+                </div>
+                <p class="content-text">
+                    A internet é uma fonte inesgotável de informações sobre saúde. Você pode ler notícias de bem-estar, encontrar exercícios adaptados para sua idade ou até pesquisar sobre um sintoma.
+                </p>
+                <p class="content-text">
+                    Lembre-se de sempre buscar fontes confiáveis, como sites de hospitais, universidades ou organizações de saúde. Isso garante que as informações que você está lendo são seguras e de qualidade.
+                </p>
+            </div>
+            
+            <div class="button-container">
+                <a href="index.html#tecnologia" class="btn-primary">Voltar para a Página Principal</a>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contato">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <p>Site destinado a informação e inclusão digital</p>
-                </div>
+                <p class="footer-info">Site destinado à informação e inclusão digital</p>
                 <div class="footer-links">
                     <a href="#" class="footer-link">Cookies</a>
                     <a href="#" class="footer-link">Privacidade</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Inclusão Digital. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Inclusão Digital. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

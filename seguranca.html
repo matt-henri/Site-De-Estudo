@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Segurança Digital - Inclusão Digital</title>
+    <meta name="description" content="Dicas e guia de segurança digital para idosos. Aprenda a se proteger de golpes, cuidar de senhas e navegar na internet com tranquilidade.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,58 +17,88 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="logo-icon">🏠</div>
+                    <a href="index.html" class="logo-icon">
+                        <img src="https://cdn-icons-png.freepik.com/512/9594/9594288.png" alt="Logo Inclusão Digital">
+                    </a>
                     <span class="logo-text">Inclusão Digital</span>
                 </div>
+                
                 <nav class="nav-desktop">
-                    <a href="index.html" class="nav-link">Início</a>
-                    <a href="#" class="nav-link">Sobre</a>
-                    <a href="#" class="nav-link">Contato</a>
+                    <a href="index.html#inicio" class="nav-link">Início</a>
+                    <a href="sobre.html" class="nav-link">Sobre</a>
+                    <a href="index.html#contato" class="nav-link">Contato</a>
                 </nav>
+                
+                <button class="mobile-menu-btn" aria-label="Abrir Menu" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
 
-    <main style="padding-top: 5rem; min-height: 80vh;">
+    <section class="content-page">
         <div class="container">
-            <div style="padding: 3rem 0;">
-                <h1 style="font-size: 2.5rem; font-weight: bold; text-align: center; margin-bottom: 2rem;">
-                    Segurança Digital
-                </h1>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <p style="font-size: 1.125rem; color: #6b7280; text-align: center; margin-bottom: 3rem;">
-                        Mantenha-se seguro no mundo digital com nossas dicas de segurança.
-                    </p>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-                        <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-                            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Senhas Seguras</h3>
-                            <p style="color: #6b7280;">Conteúdo será adicionado aqui...</p>
-                        </div>
-                        <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-                            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Golpes Online</h3>
-                            <p style="color: #6b7280;">Conteúdo será adicionado aqui...</p>
-                        </div>
-                    </div>
+            <h1 class="page-title">Segurança e Proteção Online</h1>
+            <p class="page-intro">
+                Navegar na internet é uma ótima forma de se conectar, mas é preciso ter cuidado. Conhecer os perigos e saber como se proteger é o primeiro passo para usar a tecnologia com tranquilidade.
+            </p>
+
+            <div class="content-block">
+                <h2 class="content-subtitle">1. Cuidado com os golpes e notícias falsas</h2>
+                <p class="content-text">
+                    Muitos criminosos usam a internet para enganar pessoas. Eles podem enviar mensagens ou e-mails que parecem ser de bancos, familiares ou empresas. O objetivo é fazer você clicar em um link ou fornecer seus dados pessoais.
+                </p>
+                <div class="content-illustration">
+                    <img src="caminho/para/sua/imagem-golpe.jpg" alt="Ilustração de um celular com mensagens de golpe" class="content-image">
                 </div>
+                <p class="content-text">
+                    <strong>Fique atento:</strong> Se uma mensagem pedir seus dados urgentes, desconfie. Nenhuma empresa séria pede senhas por e-mail ou WhatsApp. O melhor é sempre entrar em contato com a empresa por um número ou site oficial.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2 class="content-subtitle">2. Proteja suas senhas e dados pessoais</h2>
+                <div class="content-illustration">
+                    <img src="caminho/para/sua/imagem-senhas.jpg" alt="Ilustração de uma mão com um cadeado e chaves" class="content-image">
+                </div>
+                <p class="content-text">
+                    Suas senhas são a chave para a sua vida digital. É importante que elas sejam únicas e difíceis de adivinhar. Evite usar datas de nascimento ou nomes. O ideal é usar uma combinação de letras maiúsculas, minúsculas, números e símbolos.
+                </p>
+                <ul>
+                    <p><strong>Não use a mesma senha:</strong> Use senhas diferentes para e-mail, redes sociais e banco. Se uma for descoberta, as outras estarão seguras.</p>
+                    <p><strong>Não compartilhe:</strong> Nunca diga suas senhas a ninguém, nem mesmo a familiares ou amigos. Senha é como a chave de casa, é pessoal.</p>
+                    <p><strong>Ative a verificação em duas etapas:</strong> Muitos aplicativos e serviços têm essa opção. Ela pede um código extra (enviado por SMS, por exemplo) para você entrar, o que torna a sua conta muito mais segura.</p>
+                </ul>
+            </div>
+
+            <div class="content-block">
+                <h2 class="content-subtitle">3. Mantenha seus aplicativos e celular atualizados</h2>
+                <p class="content-text">
+                    As atualizações do sistema do seu celular e dos aplicativos não servem apenas para adicionar novas funções. Elas geralmente trazem correções de segurança para proteger o aparelho contra novas ameaças. Sempre que seu celular pedir para atualizar, faça-o em um momento tranquilo e com a bateria carregada.
+                </p>
+            </div>
+            
+            <div class="button-container">
+                <a href="index.html#tecnologia" class="btn-primary">Voltar para a Página Principal</a>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contato">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <p>Site destinado a informação e inclusão digital</p>
-                </div>
+                <p class="footer-info">Site destinado à informação e inclusão digital</p>
                 <div class="footer-links">
                     <a href="#" class="footer-link">Cookies</a>
                     <a href="#" class="footer-link">Privacidade</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Inclusão Digital. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Inclusão Digital. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

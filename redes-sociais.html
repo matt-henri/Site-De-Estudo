@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redes Sociais - Inclusão Digital</title>
+    <meta name="description" content="Guia para idosos sobre o uso de redes sociais. Aprenda a se conectar com a família e amigos de forma segura e divertida.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,58 +17,91 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <div class="logo-icon">🏠</div>
+                    <a href="index.html" class="logo-icon">
+                        <img src="https://cdn-icons-png.freepik.com/512/9594/9594288.png" alt="Logo Inclusão Digital">
+                    </a>
                     <span class="logo-text">Inclusão Digital</span>
                 </div>
+                
                 <nav class="nav-desktop">
-                    <a href="index.html" class="nav-link">Início</a>
-                    <a href="#" class="nav-link">Sobre</a>
-                    <a href="#" class="nav-link">Contato</a>
+                    <a href="index.html#inicio" class="nav-link">Início</a>
+                    <a href="sobre.html" class="nav-link">Sobre</a>
+                    <a href="index.html#contato" class="nav-link">Contato</a>
                 </nav>
+                
+                <button class="mobile-menu-btn" aria-label="Abrir Menu" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
 
-    <main style="padding-top: 5rem; min-height: 80vh;">
+    <section class="content-page">
         <div class="container">
-            <div style="padding: 3rem 0;">
-                <h1 style="font-size: 2.5rem; font-weight: bold; text-align: center; margin-bottom: 2rem;">
-                    Redes Sociais
-                </h1>
-                <div style="max-width: 800px; margin: 0 auto;">
-                    <p style="font-size: 1.125rem; color: #6b7280; text-align: center; margin-bottom: 3rem;">
-                        Conecte-se com pessoas e mantenha contato com familiares e amigos.
-                    </p>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-                        <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-                            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">WhatsApp</h3>
-                            <p style="color: #6b7280;">Conteúdo será adicionado aqui...</p>
-                        </div>
-                        <div style="background: white; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-                            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Facebook</h3>
-                            <p style="color: #6b7280;">Conteúdo será adicionado aqui...</p>
-                        </div>
-                    </div>
+            <h1 class="page-title">Conectando-se com o Mundo</h1>
+            <p class="page-intro">
+                As redes sociais são ferramentas incríveis para se manter conectado com quem você ama, mesmo à distância. Elas permitem ver fotos, enviar mensagens e acompanhar a vida de amigos e familiares de um jeito simples e prático.
+            </p>
+
+            <div class="content-block">
+                <h2 class="content-subtitle">1. O que são e como funcionam?</h2>
+                <div class="content-illustration">
+                    <img src="caminho/para/sua/imagem-redes-sociais.jpg" alt="Celular exibindo ícones de redes sociais" class="content-image">
+                </div>
+                <p class="content-text">
+                    As redes sociais, como o Facebook e o Instagram, são aplicativos que funcionam como álbuns de fotos e murais de recados virtuais. Você pode postar suas próprias fotos e textos, e também ver o que as pessoas que você segue estão fazendo. O WhatsApp, por exemplo, é uma rede social focada em mensagens e grupos, ideal para conversas rápidas com a família.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2 class="content-subtitle">2. Conectando-se com a Família e Amigos</h2>
+                <p class="content-text">
+                    Uma das maiores vantagens das redes sociais é poder ver o crescimento dos netos, participar de grupos da família e conversar com amigos que moram em outras cidades ou países. Elas ajudam a diminuir a distância e a se sentir mais perto de quem você ama, permitindo até mesmo chamadas de vídeo gratuitas.
+                </p>
+                <div class="content-illustration">
+                    <img src="caminho/para/sua/imagem-video-chamada.jpg" alt="Pessoa idosa fazendo videochamada com a família" class="content-image">
                 </div>
             </div>
-        </div>
-    </main>
 
-    <footer class="footer">
+            <div class="content-block">
+                <h2 class="content-subtitle">3. Dicas para Usar com Segurança</h2>
+                <p class="content-text">
+                    Assim como na vida real, é importante tomar alguns cuidados nas redes sociais para evitar problemas.
+                </p>
+                <ul>
+                        <p class="content-text">
+                            <strong>Ajuste suas configurações de privacidade:</strong> Certifique-se de que suas fotos e publicações só possam ser vistas por seus amigos ou familiares.
+                        </p>
+                        <p class="content-text">
+                            <strong>Cuidado com pedidos de amizade:</strong> Aceite apenas pessoas que você conhece na vida real. Perfis falsos podem tentar se aproximar para aplicar golpes.
+                        </p>
+                        <p class="content-text">
+                            <strong>Pense antes de compartilhar:</strong> Evite publicar informações muito pessoais, como seu endereço, rotina de viagens ou dados bancários.
+                        </p>
+                </ul>
+            </div>
+            
+            <div class="button-container">
+                <a href="index.html#tecnologia" class="btn-primary">Voltar para a Página Principal</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contato">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <p>Site destinado a informação e inclusão digital</p>
-                </div>
+                <p class="footer-info">Site destinado à informação e inclusão digital</p>
                 <div class="footer-links">
                     <a href="#" class="footer-link">Cookies</a>
                     <a href="#" class="footer-link">Privacidade</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Inclusão Digital. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Inclusão Digital. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
