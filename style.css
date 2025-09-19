@@ -515,6 +515,67 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* ======================================= */
+/* ESTILOS EXCLUSIVOS DA PÁGINA SOBRE      */
+/* ======================================= */
+
+/* Seção principal da página Sobre */
+.about-section {
+    padding: 8rem 2rem 4rem; /* espaço para compensar o header fixo */
+    background-color: var(--cor-fundo-secao);
+    min-height: calc(100vh - 10rem);
+}
+
+/* Título principal */
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--cor-texto-principal);
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Subtítulos (ex: Nossa Missão, O Que Você Vai Encontrar Aqui) */
+.about-subtitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 2.5rem;   /* espaço acima */
+    margin-bottom: 1rem; /* espaço abaixo */
+    color: var(--cor-texto-principal);
+    text-align: center;
+}
+
+/* Parágrafos da página Sobre */
+.about-text {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--cor-texto-secundaria);
+    max-width: 850px;
+    margin: 0 auto 2rem auto; /* centralizado e com espaço entre parágrafos */
+    text-align: justify;      /* alinhamento justificado para melhor leitura */
+}
+
+/* Bloco de destaque */
+.about-highlight {
+    background: #e0f2fe;                  /* fundo azul claro */
+    padding: 1.2rem 1.5rem;               /* espaço interno */
+    border-left: 6px solid var(--cor-primaria); /* barra azul do lado */
+    border-radius: 0.5rem;                /* cantos arredondados */
+    margin: 2.5rem auto;                  /* espaço em volta */
+    max-width: 800px;                     /* largura máxima */
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--cor-texto-principal);
+    line-height: 1.8;
+}
+
+/* Botão centralizado */
+.about-section .btn-primary {
+    margin-top: 2rem;
+    display: inline-block;
+}
+
 
 /* ======================================= */
 /* 8. RESPONSIVIDADE           */
