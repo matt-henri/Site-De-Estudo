@@ -343,45 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Adiciona contador de interações
     document.addEventListener('click', showEncouragement);
 
-    // --- NOVA FUNCIONALIDADE: Salvamento de Progresso Local ---
-    const saveProgress = (page) => {
-        const visited = JSON.parse(localStorage.getItem('visited_pages') || '[]');
-        if (!visited.includes(page)) {
-            visited.push(page);
-            localStorage.setItem('visited_pages', JSON.stringify(visited));
-        }
-    };
 
-    // Salva progresso quando visita uma página
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    saveProgress(currentPage);
-
-    // Marca cards visitados
-    const visitedPages = JSON.parse(localStorage.getItem('visited_pages') || '[]');
-    document.querySelectorAll('.tech-card').forEach(card => {
-        const href = card.getAttribute('href');
-        if (href && visitedPages.includes(href)) {
-            card.style.position = 'relative';
-            const checkmark = document.createElement('div');
-            checkmark.innerHTML = '✓';
-            checkmark.style.cssText = `
-                position: absolute;
-                top: 0.5rem;
-                right: 0.5rem;
-                background: #22c55e;
-                color: white;
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 0.8rem;
-                font-weight: bold;
-            `;
-            card.appendChild(checkmark);
-        }
-    });
 
     console.log('🎉 Site de Inclusão Digital carregado com sucesso!');
     console.log('📱 Funcionalidades interativas ativadas');

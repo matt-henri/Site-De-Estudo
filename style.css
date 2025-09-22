@@ -259,7 +259,7 @@ body {
 
 .hero-bg-img {
     width: 100%;
-    height: 100%;
+    height: 105%;
     object-fit: cover;
 }
 
@@ -663,6 +663,7 @@ body {
         font-size: 2.3rem;
         text-align: center;
     }
+
 
     .content-illustration {
         text-align: center;
