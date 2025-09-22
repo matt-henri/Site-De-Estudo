@@ -584,17 +584,21 @@ body {
 @media (max-width: 991px) {
     .nav-desktop {
         position: fixed;
-        top: 6rem;
+        top: 100%;                   /* A nova posição é no topo da tela */
         left: 0;
         width: 100%;
+        
+        /* Ajuste de altura para preencher a tela inteira */
+        height: 100vh;           
+        
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
         flex-direction: column;
-        padding: 1rem 0;
-        height: calc(100vh - 6rem);
+        padding: 4rem 0 1rem;      /* Ajusta o padding para dar espaço ao topo */
         transform: translateX(-100%);
         transition: transform 0.4s ease-in-out;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 999;           /* Z-index menor que o do botão do menu */
     }
     
     .nav-link {
