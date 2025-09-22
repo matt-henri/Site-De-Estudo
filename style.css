@@ -605,6 +605,16 @@ body {
         padding: 0.75rem 0;
     }
 
+    .about-title {
+        font-size: 1.7rem; /* Ajusta o título para telas menores */
+    }
+
+    .about-text {
+        font-size: 0.9rem;   /* Ajusta o tamanho da fonte do texto para melhor leitura */
+        text-align: left;
+    }
+}
+
     .nav-desktop.is-open {
         transform: translateX(0);
     }
