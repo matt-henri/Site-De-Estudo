@@ -2,6 +2,11 @@
 
 [Visite o site aqui](https://matt-henri.github.io/Trabalho-da-Faculdade-Uninter/)
 
+<div align="center">
+    <img src="web e mobile.png" alt="Logo do Projeto" width="850"/>
+</div>
+<br>
+
 Este projeto faz parte de uma iniciativa de extensão universitária com o objetivo de **promover a inclusão digital de idosos**, oferecendo acesso a conteúdos simples, claros e acessíveis sobre o uso da tecnologia no dia a dia.
 
 O site foi desenvolvido como uma ferramenta de apoio, reunindo informações, dicas e tutoriais práticos sobre temas como:
