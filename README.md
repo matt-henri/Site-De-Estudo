@@ -1,4 +1,4 @@
-# 📱 Projeto de Extensão – Inclusão Digital para Idosos
+# Projeto de Extensão – Inclusão Digital para Idosos
 
 [Visite o site aqui](https://matt-henri.github.io/Trabalho-da-Faculdade-Uninter/)
 
@@ -20,13 +20,13 @@ O site foi desenvolvido como uma ferramenta de apoio, reunindo informações, di
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 O principal objetivo deste projeto é **reduzir a exclusão digital da terceira idade**, incentivando a autonomia, o aprendizado contínuo e a participação ativa dos idosos no mundo digital.
 
 ---
 
-## 🚀 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - HTML5  
 - CSS3  
@@ -34,6 +34,6 @@ O principal objetivo deste projeto é **reduzir a exclusão digital da terceira 
 
 ---
 
-## 🤝 Contribuições
+## Contribuições
 
 Este projeto foi desenvolvido como parte de uma atividade acadêmica e está aberto a melhorias. **Sugestões e contribuições são bem-vindas!**
